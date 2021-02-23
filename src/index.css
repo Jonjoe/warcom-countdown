@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root, html, body {
+  max-height: 100vh;
+  height: 100%;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  max-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  overflow: hidden;
+}
+
+p, span {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.date span {
+  font-size: 5em;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  background: #333;
+  position: relative;
+  z-index: 999;
+}
+
+
+/* @media screen and (max-width: 800px) {
+  .date {
+    font-size: 4em;
+  }
+} */
+
+@media screen and (max-width: 500px) {
+  .logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .date span {
+    font-size: 1em;
+    text-align: center;
+    margin: 2px;
+    padding: 5px 10px;
+  }
+
+  p, span {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
 }
